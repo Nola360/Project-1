@@ -1,23 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
 
-
 body {
   background: rgb(190, 188, 188);
   overflow: hidden;
   margin: 0;
-  
 }
-/* SIDE MENU STYLES - positions menu to the right */
 
+/* SIDE MENU STYLES - positions menu to the right */
 .sideMenu {
  background: orange;
  padding-top: 60px;
  position: fixed; /*causes elements below to ignore space: elements occupy same space*/
- top: 0; /*positions element from very top*/
- left: 0; /*positions element from right side*/
+ top: 0px; /*positions element from very top*/
+ left: 0px; /*positions element from right side*/
  height: 100%;
- width: 0; /*causes child element to appear block level, removes background color and space created by elements */
- z-index: -1; /*causes elements in background from fixed property to appear */
+ width: 0px; /*causes child element to appear block level, removes background color and space created by elements */
+ z-index: 1; /*causes elements in background from fixed property to appear */
  transition: 0.5s;
  overflow-x: hidden;
 }
@@ -25,12 +23,15 @@ body {
 /* SIDE MENU CLOSE BUTTON STYLES - Controls the position of the 'X' */
 .sideMenu .close {
   position: absolute;
-  top: 0;
-  left: 25px;
+  top: 0px;
+  right: 25px;
   margin-left: 50px;
-  font-size: 40px;
-  /* padding-top: 10px; */
+  font-size: 95px;
 } 
+
+#sideMenu-wrapper {
+  margin-top: 100px;
+}
 
 /* STYLES THE SIDE MENU LINKS */
 .sideMenu a {
@@ -45,33 +46,31 @@ body {
   transition: 0.3s;
 }
 
-
-#sideMenu-wrapper {
-  margin-top: 100px;
-}
-
 #sideMenu-wrapper a:after {
   position: absolute;
   left: 0%;
   background: chartreuse;
-  height: 500px;
+  height: 50px;
   width: 0;
   transition: width 0.35s ease-in-out;
-  z-index: -1;
+  /* z-index: -1; */
   content: '';
+}
+
+#sideMenu-wrapper a:hover {
+  padding-left: 80px;
+   transition: 0.35s ease-in-out;
 }
 
 #sideMenu-wrapper a:hover:after {
   width: 10%;
 }
 
-
 /* PAGE CONTENT - styles the position of the text */
 #page-content {
   transition: marginLeft .5s;
   padding: 16px;
 }
-
 
 h1 {
   font-family: 'helvetica';
@@ -83,5 +82,5 @@ h1 {
 
 span {
     letter-spacing: 5px;
-    /* padding-left: 44px; */
+    padding-left: 44px;
 }

@@ -62,7 +62,7 @@ body {
   width: 10%;
 }
 
-.sideMenu-wapper a:hover {
+.sideMenu-wrapper a:hover {
   padding-left: 64px;
   transition: 0.35s ease-in-out;
 }
