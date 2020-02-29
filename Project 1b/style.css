@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+
+body {
+  background: rgb(190, 188, 188);
+  overflow: hidden;
+  margin: 0;
+  
+}
+/* SIDE MENU STYLES - positions menu to the right */
+
+.sideMenu {
+ background: orange;
+ padding-top: 60px;
+ position: fixed; /*causes elements below to ignore space: elements occupy same space*/
+ top: 0; /*positions element from very top*/
+ left: 0; /*positions element from right side*/
+ height: 100%;
+ width: 0; /*causes child element to appear block level, removes background color and space created by elements */
+ z-index: -1; /*causes elements in background from fixed property to appear */
+ transition: 0.5s;
+ /* overflow-x: hidden; */
+}
+
+/* SIDE MENU CLOSE BUTTON STYLES - Controls the position of the 'X' */
+.sideMenu .close {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  margin-left: 50px;
+  font-size: 40px;
+  /* padding-top: 10px; */
+} 
+
+
+.sideMenu a {
+  display: block;
+  text-decoration: none;
+  padding: 4px 4px 4px 16px;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-family: 'inconsolata';
+  color: white;
+  transition: 0.3s;
+}
+
+
+#sideMenu-wrapper {
+  /* margin-top: 100px; */
+}
