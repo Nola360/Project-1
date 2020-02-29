@@ -19,7 +19,7 @@ body {
  width: 0; /*causes child element to appear block level, removes background color and space created by elements */
  z-index: -1; /*causes elements in background from fixed property to appear */
  transition: 0.5s;
- /* overflow-x: hidden; */
+ overflow-x: hidden;
 }
 
 /* SIDE MENU CLOSE BUTTON STYLES - Controls the position of the 'X' */
@@ -32,7 +32,7 @@ body {
   /* padding-top: 10px; */
 } 
 
-
+/* STYLES THE SIDE MENU LINKS */
 .sideMenu a {
   display: block;
   text-decoration: none;
@@ -47,5 +47,41 @@ body {
 
 
 #sideMenu-wrapper {
-  /* margin-top: 100px; */
+  margin-top: 100px;
+}
+
+#sideMenu-wrapper a:after {
+  position: absolute;
+  left: 0%;
+  background: chartreuse;
+  height: 500px;
+  width: 0;
+  transition: width 0.35s ease-in-out;
+  z-index: -1;
+  content: '';
+}
+
+#sideMenu-wrapper a:hover:after {
+  width: 10%;
+}
+
+
+/* PAGE CONTENT - styles the position of the text */
+#page-content {
+  transition: marginLeft .5s;
+  padding: 16px;
+}
+
+
+h1 {
+  font-family: 'helvetica';
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 8em;
+  padding: 5px;
+}
+
+span {
+    letter-spacing: 5px;
+    /* padding-left: 44px; */
 }
